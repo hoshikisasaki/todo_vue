@@ -30,6 +30,9 @@ export default {
     };
   },
  
+    created (){
+ this.getTodos();
+   },
   methods: {
     async getTodos() {
       const resData = await axios.get("http://127.0.0.1:8000/api/todos/");
@@ -55,9 +58,6 @@ export default {
       await this.getTodos();
     },
     
-       created (){
-    this.getTodos();
-      },
    }
   }
  
